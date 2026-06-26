@@ -119,8 +119,8 @@ Contributing to the modular QQ chat assistant ecosystem at [MizukiBot-Develop](h
 
 ### 02. 指标监控 / GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=HX-Wrdzgzs&show_icons=true&theme=vue-dark&hide_border=true&bg_color=121212" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-gamma-beryl-63.vercel.app/api?username=HX-Wrdzgzs&show_icons=true&theme=vue-dark&hide_border=true&bg_color=121212&include_all_commits=true&count_private=true" alt="GitHub Stats" />
 </p>
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HX-Wrdzgzs&layout=compact&theme=vue-dark&hide_border=true&bg_color=121212" alt="Top Languages" />
+  <img src="https://github-readme-stats-gamma-beryl-63.vercel.app/api/top-langs/?username=HX-Wrdzgzs&layout=compact&theme=vue-dark&hide_border=true&bg_color=121212" alt="Top Languages" />
 </p>
