@@ -1,3 +1,15 @@
+## 关于我 / About
+
+我主要在课余时间维护一些和机器人、Web 文档、移动端工具相关的项目。多数仓库仍在持续整理中，当前更偏向学习、验证想法和服务实际使用场景。
+
+目前比较常接触的方向包括：
+
+- QQ 官方机器人与 OneBot 生态的兼容层
+- NoneBot2 插件与群聊工具
+- VitePress / React / Vue 文档站与 Web 前端
+- Kotlin Android 客户端与 FastAPI 后端
+- 自动化工具、网关服务和小型基础设施
+
 ## 技术栈 / Tech Stack
 
 <p align="left">
@@ -12,11 +24,11 @@
   <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android" />
 </p>
 
-## 核心项目 / Core Projects
+## 近期维护的一些项目 / Recent Work
 
-- **Gensokyo-NewQQ**：基于 QQ 官方机器人 API 的 OneBot V11 Go 网关，重点覆盖群消息、主动消息、扩展 CQ 码、WebUI 与多客户端兼容。
-- **GensokyoNewQQWeb**：Gensokyo-NewQQ 配套文档与展示站，基于 VitePress 构建。
-- **Mizuki-Sync-Android**：面向舞萌 DX 的 Android 查分与曲库辅助工具，采用 Kotlin 客户端 + FastAPI 后端架构。
+- **Gensokyo-NewQQ**：基于 QQ 官方机器人 API 的 OneBot V11 网关，重点整理消息、接口和 WebUI 相关能力。
+- **GensokyoNewQQWeb**：Gensokyo-NewQQ 的配套文档站，基于 VitePress 构建。
+- **Mizuki-Sync-Android**：面向舞萌 DX 的 Android 查询与曲库辅助工具，采用 Kotlin 客户端 + FastAPI 后端架构。
 - **hx-pjsk-gateway**：Project Sekai 网页查分终端与可视化网关，负责 QQ 鉴权、OneBot 数据桥接与前端查询体验。
 - **MIzuki-Econmy**：NoneBot2 群聊经济与社交互动插件，包含虚拟积分、任务、收集、抽卡、农场、宠物、副本、日记墙等模块。
 - **qbind / Mizuki-plugin-qbind**：账号绑定服务与 Mizuki 机器人侧绑定插件，用于统一 QQ 身份映射。
@@ -25,11 +37,11 @@
 
 ## 当前关注 / Current Focus
 
-- QQ 官方机器人到 OneBot 生态的兼容层建设
-- Web 文档站与用户可读的帮助体系
-- NoneBot2 插件的状态管理、并发控制与原生 Markdown / Inline Keyboard 交互
-- Android 客户端与后端 API 的分层设计
-- Agent / IDE 自动化场景下的人工审批与安全边界
+- 更稳定地整理 QQ 官方机器人到 OneBot 生态的兼容链路
+- 把项目文档写得更清楚，降低自己和其他使用者的维护成本
+- 改进 NoneBot2 插件中的状态管理、并发处理和消息展示
+- 继续学习 Android、后端 API 与小型网关服务的工程化实践
+- 在自动化工具中保留必要的人工确认和安全边界
 
 ## 数据统计 / Stats
 
