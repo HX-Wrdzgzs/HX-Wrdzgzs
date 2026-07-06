@@ -1,15 +1,3 @@
-## 关于我 / About
-
-我主要在课余时间维护一些和机器人、Web 文档、移动端工具相关的项目。多数仓库仍在持续整理中，当前更偏向学习、验证想法和服务实际使用场景。
-
-目前比较常接触的方向包括：
-
-- QQ 官方机器人与 OneBot 生态的兼容层
-- NoneBot2 插件与群聊工具
-- VitePress / React / Vue 文档站与 Web 前端
-- Kotlin Android 客户端与 FastAPI 后端
-- 自动化工具、网关服务和小型基础设施
-
 ## 技术栈 / Tech Stack
 
 <p align="left">
