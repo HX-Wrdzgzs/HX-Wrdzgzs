@@ -1,7 +1,3 @@
-# HX-Wrdzgzs
-
-高中生开发者 / Bot 与 Web 工程实践者。主要方向包括 QQ 官方机器人生态、OneBot 网关、NoneBot2 插件、Android 工具、Web 文档站与自动化脚本。
-
 ## 技术栈 / Tech Stack
 
 <p align="left">
