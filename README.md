@@ -2,6 +2,13 @@
 
 # HX-Wrdzgzs
 
+<p>
+  <a href="https://github.com/Amia-Mizuki-Dev-Team">Organization</a> ·
+  <a href="https://help.mizuki.top">Mizuki Docs</a> ·
+  <a href="https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb">Gensokyo Web</a> ·
+  <a href="https://github.com/HX-Wrdzgzs/retro-monitor">Retro Monitor</a>
+</p>
+
 </div>
 
 ## 常用技术 / Tech Stack
@@ -34,22 +41,24 @@
 
 ## 主要项目 / Selected Work
 
-- **[Amia-Mizuki Dev Team](https://github.com/Amia-Mizuki-Dev-Team)**：围绕 NoneBot2、QQ Bot 与音游数据能力维护模块化插件、公共文档和相关工具。
-- **[MizukiBot](https://github.com/Amia-Mizuki-Dev-Team/MizukiBot)**：Mizuki Bot 的公开文档与生态入口，整理功能说明、使用规范、更新公告及关联项目。
-- **[Amia-plugin-maimaidx](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-maimaidx)**：舞萌 DX 数据与查询能力的主要插件项目，持续维护数据接口、曲库和成绩处理链路。
-- **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 的配套 Web 文档与项目入口，持续跟进上游版本、OneBot 能力和 WebUI 行为变化。
-- **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：面向舞萌 DX 的 Android 第三方客户端，采用 Kotlin 客户端与 FastAPI 后端的前后端分离架构。
-- **[hx-pjsk-gateway](https://github.com/HX-Wrdzgzs/hx-pjsk-gateway)**：Project Sekai 网页查询终端与数据可视化网关，连接 Web、机器人验证节点与数据服务。
-- **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控和多媒体显示系统。
-- **[ag-pocket-console](https://github.com/HX-Wrdzgzs/ag-pocket-console)**：面向 Google Antigravity Agent 的移动审批与监督控制台实验，探索基于 `PreToolUse` Hook 的人工确认链路。
+### Bot 与音游 / Bot & Rhythm Games
+
+- **[MizukiBot](https://github.com/Amia-Mizuki-Dev-Team/MizukiBot)**：公开文档、功能说明、更新公告与生态入口。
+- **[Amia-plugin-maimaidx](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-maimaidx)**：舞萌 DX 曲库、成绩与查询能力插件。
+- **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：采用 Kotlin 与 FastAPI 的舞萌 DX Android 第三方客户端。
+- **[hx-pjsk-gateway](https://github.com/HX-Wrdzgzs/hx-pjsk-gateway)**：连接 PJSK Web 查询、机器人验证与数据节点的网关。
+
+### Web 与系统 / Web & Systems
+
+- **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 配套文档站，持续跟进 OneBot 与 WebUI 变化。
+- **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控系统。
+- **[ag-pocket-console](https://github.com/HX-Wrdzgzs/ag-pocket-console)**：基于 `PreToolUse` Hook 的移动审批与监督控制台实验。
 
 ## 当前关注 / Current Focus
 
-- 完善 Amia / Mizuki 插件生态的身份、Provider、权限、审计与跨插件契约
-- 跟进 Gensokyo-NewQQ 版本变化及 QQ 官方机器人到 OneBot V11 的兼容链路
-- 改进舞萌 DX、Project Sekai 等音游数据服务的同步、查询和展示体验
-- 补齐项目文档、CI、配置安全、错误处理和可维护性验证
-- 继续探索 Home Assistant、ESP32-S3 与人工确认型自动化工具
+- Amia / Mizuki 插件生态的身份、Provider、权限与审计契约
+- Gensokyo-NewQQ 兼容、音游数据同步及 Web 查询链路
+- Home Assistant、ESP32-S3 与保留人工确认的自动化工具
 
 ## 活跃概览 / Activity Overview
 
@@ -61,7 +70,7 @@
   </picture>
 </p>
 
-<p align="center"><sub>公开贡献统计，由 GitHub Actions 自动更新。</sub></p>
+<p align="center"><sub>公开贡献统计，自动更新。</sub></p>
 
 ## GitHub 数据 / GitHub Stats
 
