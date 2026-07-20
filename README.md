@@ -1,35 +1,64 @@
-## 技术栈 / Tech Stack
+<div align="center">
+
+# HX-Wrdzgzs
+
+**Amia-Mizuki Dev Team 维护者**
+
+QQ Bot 生态 · 音游数据工具 · Web / API · 自动化与嵌入式设备
+
+</div>
+
+## 关于 / About
+
+主要维护 Amia / Mizuki 项目生态，工作内容集中在 NoneBot2 插件、QQ 官方机器人与 OneBot V11 兼容、音游数据服务、Web 网关、项目文档和小型硬件终端。
+
+开发时更关注接口边界、身份与状态模型、配置安全、可测试性和长期维护成本，而不是单纯堆叠功能。
+
+## 常用技术 / Tech Stack
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
 </p>
 
-## 近期维护的一些项目 / Recent Work
+<p align="left">
+  <img src="https://img.shields.io/badge/NoneBot2-121212?style=flat-square" alt="NoneBot2" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+</p>
 
-- **Gensokyo-NewQQ**：基于 QQ 官方机器人 API 的 OneBot V11 网关，重点整理消息、接口和 WebUI 相关能力。
-- **GensokyoNewQQWeb**：Gensokyo-NewQQ 的配套文档站，基于 VitePress 构建。
-- **Mizuki-Sync-Android**：面向舞萌 DX 的 Android 查询与曲库辅助工具，采用 Kotlin 客户端 + FastAPI 后端架构。
-- **hx-pjsk-gateway**：Project Sekai 网页查分终端与可视化网关，负责 QQ 鉴权、OneBot 数据桥接与前端查询体验。
-- **Amia Plugin Economy**：开发组内部维护的群聊经济与社交互动插件，包含虚拟积分、任务、收集、抽卡、农场、宠物、副本、日记墙等模块。
-- **qbind / Mizuki Plugin QBind**：账号绑定服务与机器人侧绑定插件，用于统一 QQ 身份映射。
-- **ag-pocket-console**：面向 Google Antigravity 的移动审批与监督控制台实验项目，基于 `PreToolUse` hook 进行命令审批验证。
-- **Edge-Web-Form-Auto-Filler**：基于 Selenium 的 Edge 表单辅助填写脚本，采用人工登录、自动预填、人工复核的半自动流程。
+<p align="left">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/Home_Assistant-18BCF2?style=flat-square&logo=homeassistant&logoColor=white" alt="Home Assistant" />
+  <img src="https://img.shields.io/badge/ESPHome-000000?style=flat-square&logo=esphome&logoColor=white" alt="ESPHome" />
+</p>
+
+## 主要项目 / Selected Work
+
+- **[MizukiBot](https://github.com/Amia-Mizuki-Dev-Team/MizukiBot)**：Mizuki Bot 的公开文档与生态入口，整理功能说明、使用规范、更新公告及关联项目。
+- **[amia-core](https://github.com/Amia-Mizuki-Dev-Team/amia-core)**：Amia / Mizuki NoneBot 插件生态的契约层，统一身份模型、Provider 协议、注册表与安全调用方式。
+- **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 的配套 Web 文档与项目入口，持续跟进上游版本、OneBot 能力和 WebUI 行为变化。
+- **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：面向舞萌 DX 的 Android 第三方客户端，采用 Kotlin 客户端与 FastAPI 后端的前后端分离架构。
+- **[hx-pjsk-gateway](https://github.com/HX-Wrdzgzs/hx-pjsk-gateway)**：Project Sekai 网页查询终端与数据可视化网关，连接 Web、机器人验证节点与数据服务。
+- **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控和多媒体显示系统。
+- **[ag-pocket-console](https://github.com/HX-Wrdzgzs/ag-pocket-console)**：面向 Google Antigravity Agent 的移动审批与监督控制台实验，探索基于 `PreToolUse` Hook 的人工确认链路。
 
 ## 当前关注 / Current Focus
 
-- 更稳定地整理 QQ 官方机器人到 OneBot 生态的兼容链路
-- 把项目文档写得更清楚，降低自己和开发组内部维护成本
-- 改进 NoneBot2 插件中的状态管理、并发处理和消息展示
-- 继续学习 Android、后端 API 与小型网关服务的工程化实践
-- 在自动化工具中保留必要的人工确认和安全边界
+- 完善 `amia-core` 的身份、Provider、权限、审计与跨插件契约
+- 跟进 Gensokyo-NewQQ 版本变化及 QQ 官方机器人到 OneBot V11 的兼容链路
+- 改进舞萌 DX、Project Sekai 等音游数据服务的同步、查询和展示体验
+- 补齐项目文档、CI、配置安全、错误处理和可维护性验证
+- 继续探索 Home Assistant、ESP32-S3 与人工确认型自动化工具
 
 ## 数据统计 / Stats
 
@@ -46,5 +75,5 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-gamma-beryl-63.vercel.app/api/top-langs/?username=HX-Wrdzgzs&layout=compact&theme=vue-dark&hide_border=true&bg_color=121212" alt="Top Languages" />
+  <img src="https://github-readme-stats-gamma-beryl-63.vercel.app/api/top-langs/?username=HX-Wrdzgzs&layout=compact&theme=vue-dark&hide_border=true&bg_color=121212&exclude_repo=Gensokyo-NewQQ,github-readme-stats" alt="Top Languages" />
 </p>
