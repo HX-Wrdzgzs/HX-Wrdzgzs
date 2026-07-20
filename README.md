@@ -2,17 +2,7 @@
 
 # HX-Wrdzgzs
 
-**Amia-Mizuki Dev Team 维护者**
-
-QQ Bot 生态 · 音游数据工具 · Web / API · 自动化与嵌入式设备
-
 </div>
-
-## 关于 / About
-
-主要维护 Amia / Mizuki 项目生态，工作内容集中在 NoneBot2 插件、QQ 官方机器人与 OneBot V11 兼容、音游数据服务、Web 网关、项目文档和小型硬件终端。
-
-开发时更关注接口边界、身份与状态模型、配置安全、可测试性和长期维护成本，而不是单纯堆叠功能。
 
 ## 常用技术 / Tech Stack
 
