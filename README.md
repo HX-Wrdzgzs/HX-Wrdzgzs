@@ -44,8 +44,9 @@ QQ Bot 生态 · 音游数据工具 · Web / API · 自动化与嵌入式设备
 
 ## 主要项目 / Selected Work
 
+- **[Amia-Mizuki Dev Team](https://github.com/Amia-Mizuki-Dev-Team)**：围绕 NoneBot2、QQ Bot 与音游数据能力维护模块化插件、公共文档和相关工具。
 - **[MizukiBot](https://github.com/Amia-Mizuki-Dev-Team/MizukiBot)**：Mizuki Bot 的公开文档与生态入口，整理功能说明、使用规范、更新公告及关联项目。
-- **[amia-core](https://github.com/Amia-Mizuki-Dev-Team/amia-core)**：Amia / Mizuki NoneBot 插件生态的契约层，统一身份模型、Provider 协议、注册表与安全调用方式。
+- **[Amia-plugin-maimaidx](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-maimaidx)**：舞萌 DX 数据与查询能力的主要插件项目，持续维护数据接口、曲库和成绩处理链路。
 - **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 的配套 Web 文档与项目入口，持续跟进上游版本、OneBot 能力和 WebUI 行为变化。
 - **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：面向舞萌 DX 的 Android 第三方客户端，采用 Kotlin 客户端与 FastAPI 后端的前后端分离架构。
 - **[hx-pjsk-gateway](https://github.com/HX-Wrdzgzs/hx-pjsk-gateway)**：Project Sekai 网页查询终端与数据可视化网关，连接 Web、机器人验证节点与数据服务。
@@ -54,7 +55,7 @@ QQ Bot 生态 · 音游数据工具 · Web / API · 自动化与嵌入式设备
 
 ## 当前关注 / Current Focus
 
-- 完善 `amia-core` 的身份、Provider、权限、审计与跨插件契约
+- 完善 Amia / Mizuki 插件生态的身份、Provider、权限、审计与跨插件契约
 - 跟进 Gensokyo-NewQQ 版本变化及 QQ 官方机器人到 OneBot V11 的兼容链路
 - 改进舞萌 DX、Project Sekai 等音游数据服务的同步、查询和展示体验
 - 补齐项目文档、CI、配置安全、错误处理和可维护性验证
