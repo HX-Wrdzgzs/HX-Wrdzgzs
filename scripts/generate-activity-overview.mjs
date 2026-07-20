@@ -91,20 +91,49 @@ function allocatePercentages(values) {
 
   const allocated = entries.map(([key, value], index) => {
     const exact = (value / total) * 100;
-    const floor = Math.floor(exact);
-    return { key, value, index, floor, remainder: exact - floor };
+    const minimum = value > 0 ? 1 : 0;
+    return {
+      key,
+      value,
+      index,
+      exact,
+      minimum,
+      assigned: Math.max(minimum, Math.floor(exact)),
+      remainder: exact - Math.floor(exact),
+    };
   });
 
-  let remaining = 100 - allocated.reduce((sum, item) => sum + item.floor, 0);
-  const priority = [...allocated].sort(
-    (a, b) => b.remainder - a.remainder || b.value - a.value || a.index - b.index,
-  );
+  let remaining = 100 - allocated.reduce((sum, item) => sum + item.assigned, 0);
 
-  for (let index = 0; index < remaining; index += 1) {
-    priority[index % priority.length].floor += 1;
+  if (remaining > 0) {
+    const priority = [...allocated].sort(
+      (a, b) => b.remainder - a.remainder || b.value - a.value || a.index - b.index,
+    );
+    for (let index = 0; index < remaining; index += 1) {
+      priority[index % priority.length].assigned += 1;
+    }
   }
 
-  return Object.fromEntries(allocated.map(({ key, floor }) => [key, floor]));
+  while (remaining < 0) {
+    const candidate = [...allocated]
+      .filter((item) => item.assigned > item.minimum)
+      .sort(
+        (a, b) =>
+          b.assigned - b.minimum - (a.assigned - a.minimum) ||
+          a.remainder - b.remainder ||
+          b.value - a.value ||
+          a.index - b.index,
+      )[0];
+
+    if (!candidate) {
+      break;
+    }
+
+    candidate.assigned -= 1;
+    remaining += 1;
+  }
+
+  return Object.fromEntries(allocated.map(({ key, assigned }) => [key, assigned]));
 }
 
 function calculateMetrics(counts) {
