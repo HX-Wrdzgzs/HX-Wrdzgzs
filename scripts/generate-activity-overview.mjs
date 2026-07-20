@@ -81,6 +81,32 @@ async function loadCounts() {
   };
 }
 
+function allocatePercentages(values) {
+  const entries = Object.entries(values);
+  const total = entries.reduce((sum, [, value]) => sum + value, 0);
+
+  if (total === 0) {
+    return Object.fromEntries(entries.map(([key]) => [key, 0]));
+  }
+
+  const allocated = entries.map(([key, value], index) => {
+    const exact = (value / total) * 100;
+    const floor = Math.floor(exact);
+    return { key, value, index, floor, remainder: exact - floor };
+  });
+
+  let remaining = 100 - allocated.reduce((sum, item) => sum + item.floor, 0);
+  const priority = [...allocated].sort(
+    (a, b) => b.remainder - a.remainder || b.value - a.value || a.index - b.index,
+  );
+
+  for (let index = 0; index < remaining; index += 1) {
+    priority[index % priority.length].floor += 1;
+  }
+
+  return Object.fromEntries(allocated.map(({ key, floor }) => [key, floor]));
+}
+
 function calculateMetrics(counts) {
   const normalized = {
     commits: Math.max(0, Number(counts.commits) || 0),
@@ -91,17 +117,17 @@ function calculateMetrics(counts) {
   };
 
   const total = normalized.commits + normalized.issues + normalized.pullRequests + normalized.reviews;
-  const percentage = (value) => (total === 0 ? 0 : Math.round((value / total) * 100));
+  const percentages = allocatePercentages({
+    commits: normalized.commits,
+    issues: normalized.issues,
+    pullRequests: normalized.pullRequests,
+    reviews: normalized.reviews,
+  });
 
   return {
     ...normalized,
     total,
-    percentages: {
-      commits: percentage(normalized.commits),
-      issues: percentage(normalized.issues),
-      pullRequests: percentage(normalized.pullRequests),
-      reviews: percentage(normalized.reviews),
-    },
+    percentages,
   };
 }
 
@@ -156,10 +182,10 @@ function renderSvg(metrics, theme) {
   <line x1="${centerX - axisX}" y1="${centerY}" x2="${centerX + axisX}" y2="${centerY}" stroke="${accent}" stroke-width="3" stroke-linecap="round"/>
   <line x1="${centerX}" y1="${centerY - axisY}" x2="${centerX}" y2="${centerY + axisY}" stroke="${accent}" stroke-width="3" stroke-linecap="round"/>
 
-  ${marker(commitX, centerY)}
-  ${marker(issueX, centerY)}
-  ${marker(centerX, reviewY)}
-  ${marker(centerX, prY)}
+  ${metrics.commits > 0 ? marker(commitX, centerY) : ''}
+  ${metrics.issues > 0 ? marker(issueX, centerY) : ''}
+  ${metrics.reviews > 0 ? marker(centerX, reviewY) : ''}
+  ${metrics.pullRequests > 0 ? marker(centerX, prY) : ''}
   <circle cx="${centerX}" cy="${centerY}" r="6" fill="${centerFill}" stroke="${accent}" stroke-width="3"/>
 
   <text x="${centerX - axisX - 20}" y="${centerY - 8}" text-anchor="end" class="percent">${metrics.percentages.commits}%</text>
