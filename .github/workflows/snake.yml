@@ -12,6 +12,10 @@ on:
       - scripts/**
       - .github/workflows/snake.yml
 
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
 jobs:
   generate:
     permissions:
