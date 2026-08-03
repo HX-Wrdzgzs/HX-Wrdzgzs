@@ -35,21 +35,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate GitHub stats (light)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&theme=default
-          path: dist/github-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate GitHub stats (dark)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&theme=github_dark
-          path: dist/github-stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate GitHub stats
+        run: node scripts/generate-github-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages (light)
         uses: readme-tools/github-readme-stats-action@v1
