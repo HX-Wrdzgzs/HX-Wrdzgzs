@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <title>404 · 余白の向こう。</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .not-found { min-height: 100svh; display: grid; place-items: center; padding: 32px; }
+    .not-found-inner { width: min(100%, 760px); }
+    .not-found-code { margin: 0 0 18px; color: var(--accent); font: 0.72rem var(--mono); letter-spacing: .12em; }
+    .not-found h1 { margin: 0; font-size: clamp(4rem, 16vw, 9rem); line-height: .9; letter-spacing: -.07em; }
+    .not-found p { max-width: 520px; margin: 28px 0; color: var(--muted); font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="not-found">
+    <div class="not-found-inner">
+      <p class="not-found-code">SIGNAL LOST / 404</p>
+      <h1>Nothing<br />here.</h1>
+      <p>这个地址没有对应的页面。可能是链接失效了，也可能这里只是一块真正的余白。</p>
+      <a class="button button-primary" href="./">Return home <span aria-hidden="true">←</span></a>
+    </div>
+  </main>
+</body>
+</html>
