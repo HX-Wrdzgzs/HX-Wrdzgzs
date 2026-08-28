@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <meta name="description" content="HX-Wrdzgzs 的个人数字主页：软件、系统、业余无线电与实验项目。" />
+  <meta property="og:title" content="余白の向こう。· HX-Wrdzgzs" />
+  <meta property="og:description" content="Software, systems, radio, and things in between." />
+  <meta property="og:type" content="website" />
+  <title>余白の向こう。· HX-Wrdzgzs</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="pointer-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="回到首页">
+      <span class="brand-mark">HX</span>
+      <span class="brand-separator">/</span>
+      <span class="brand-copy">余白の向こう。</span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="#work">Work</a>
+      <a href="#lab">Lab</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="header-link" href="https://github.com/HX-Wrdzgzs" target="_blank" rel="noreferrer">
+      GitHub
+      <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell section-reveal">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          Personal digital lab · Nanjing / Internet
+        </div>
+
+        <h1>
+          I build things between
+          <span class="accent-line">software, systems, and radio.</span>
+        </h1>
+
+        <p class="hero-intro">
+          写软件，也折腾服务器、网络和无线电。这里收着一些真正投入时间做过的项目，
+          以及那些只是因为“想看看能不能做到”而开始的实验。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            Explore selected work
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="button button-ghost" href="https://github.com/HX-Wrdzgzs" target="_blank" rel="noreferrer">
+            github.com/HX-Wrdzgzs
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="当前状态">
+        <div class="panel-topline">
+          <span>NOW / 2026</span>
+          <span class="mono">● ONLINE</span>
+        </div>
+
+        <div class="signal-stage" aria-hidden="true">
+          <div class="signal-orbit orbit-a"></div>
+          <div class="signal-orbit orbit-b"></div>
+          <div class="signal-orbit orbit-c"></div>
+          <div class="signal-core">
+            <span>BA4THG</span>
+            <small>ON AIR</small>
+          </div>
+          <span class="signal-node node-a"></span>
+          <span class="signal-node node-b"></span>
+          <span class="signal-node node-c"></span>
+        </div>
+
+        <dl class="now-list">
+          <div>
+            <dt>BUILDING</dt>
+            <dd>Android · Bots · Web tooling</dd>
+          </div>
+          <div>
+            <dt>EXPLORING</dt>
+            <dd>Infrastructure · Radio · AI audio</dd>
+          </div>
+          <div>
+            <dt>CALLSIGN</dt>
+            <dd class="mono">BA4THG</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="work" class="shell work-section section-reveal">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">01 / SELECTED WORK</p>
+          <h2>Things that became real.</h2>
+        </div>
+        <p class="section-note">
+          不按语言和框架分类，只放真正值得点进去看的东西。
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-card project-featured" href="https://github.com/HX-Wrdzgzs/retro-monitor" target="_blank" rel="noreferrer">
+          <div class="project-index">01</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>HARDWARE / SYSTEMS</span>
+              <span>2026</span>
+            </div>
+            <h3>Retro Monitor</h3>
+            <p>
+              把 Windows 主机遥测、Home Assistant 和 ESP32-S3 桌面终端连接成一条完整的数据链路。
+            </p>
+            <div class="tags">
+              <span>C#</span><span>Home Assistant</span><span>ESP32-S3</span>
+            </div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/HX-Wrdzgzs/ham-checkin-assistant" target="_blank" rel="noreferrer">
+          <div class="project-index">02</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>AMATEUR RADIO / WINDOWS</span>
+              <span>ACTIVE</span>
+            </div>
+            <h3>HX-HAM</h3>
+            <p>
+              面向业余无线电中继点名场景的本地录入助手：呼号解析、历史画像、SQLite 与 Excel 协作。
+            </p>
+            <div class="tags">
+              <span>Radio</span><span>SQLite</span><span>Automation</span>
+            </div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/HX-Wrdzgzs/Amia-Sync-Android" target="_blank" rel="noreferrer">
+          <div class="project-index">03</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>ANDROID / RHYTHM GAME</span>
+              <span>PUBLIC</span>
+            </div>
+            <h3>Amia Sync Android</h3>
+            <p>
+              围绕舞萌 DX 数据与服务链路构建的 Android 客户端，把移动端体验和后端能力放进同一个产品里。
+            </p>
+            <div class="tags">
+              <span>Kotlin</span><span>FastAPI</span><span>Android</span>
+            </div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/HX-Wrdzgzs/hx-pjsk-gateway" target="_blank" rel="noreferrer">
+          <div class="project-index">04</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>PJSK / GATEWAY</span>
+              <span>PUBLIC</span>
+            </div>
+            <h3>HX PJSK Gateway</h3>
+            <p>
+              连接 PJSK Web 查询、机器人验证与数据节点的网关，把散落的数据访问整理成稳定链路。
+            </p>
+            <div class="tags">
+              <span>PJSK</span><span>API</span><span>Gateway</span>
+            </div>
+          </div>
+          <span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <a class="text-link" href="https://github.com/HX-Wrdzgzs?tab=repositories" target="_blank" rel="noreferrer">
+        View all public repositories <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section id="lab" class="lab-section section-reveal">
+      <div class="shell">
+        <div class="section-heading lab-heading">
+          <div>
+            <p class="kicker">02 / LAB</p>
+            <h2>Things that may become something.</h2>
+          </div>
+          <p class="section-note">
+            有些项目来自明确需求；另一些只是因为一个问题足够有趣。
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card">
+            <div class="lab-number mono">A.01</div>
+            <h3>Infrastructure</h3>
+            <p>Virtualization, networking, homelab, monitoring, deployment and unnecessarily complicated servers.</p>
+            <div class="lab-line" aria-hidden="true"></div>
+          </article>
+
+          <article class="lab-card">
+            <div class="lab-number mono">A.02</div>
+            <h3>Radio</h3>
+            <p>QSO workflows, repeater tooling, local data processing and amateur-radio experiments around BA4THG.</p>
+            <div class="lab-line" aria-hidden="true"></div>
+          </article>
+
+          <article class="lab-card">
+            <div class="lab-number mono">A.03</div>
+            <h3>AI / Audio</h3>
+            <p>Voice, source separation and small experiments around models, audio pipelines and practical tooling.</p>
+            <div class="lab-line" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="shell about-section section-reveal">
+      <div class="about-label">
+        <p class="kicker">03 / ABOUT</p>
+      </div>
+
+      <div class="about-copy">
+        <p class="about-lead">
+          Most of my work lives somewhere between
+          <em>a useful tool</em> and <em>an experiment.</em>
+        </p>
+        <div class="about-columns">
+          <p>
+            我不太想把这里写成一份传统简历。比起列出“熟悉什么”，我更愿意把真正做过的东西摆在这里。
+            软件、机器人、Android、服务器、网络和无线电看起来跨度很大，但本质上都在解决同一个问题：
+            怎样让不同的系统可靠地连接起来。
+          </p>
+          <p>
+            有些最终成为长期维护的项目，有些停在实验阶段。它们都属于这里。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-reveal">
+      <div class="shell contact-inner">
+        <div>
+          <p class="kicker">04 / ELSEWHERE</p>
+          <h2>Find me elsewhere.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/HX-Wrdzgzs" target="_blank" rel="noreferrer">
+            <span>GitHub</span><span>↗</span>
+          </a>
+          <a href="https://github.com/Amia-Mizuki-Dev-Team" target="_blank" rel="noreferrer">
+            <span>Amia Mizuki Dev Team</span><span>↗</span>
+          </a>
+          <a href="https://help.mizuki.top" target="_blank" rel="noreferrer">
+            <span>Mizuki Docs</span><span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <p>© 2026 HX-Wrdzgzs</p>
+    <p class="mono">余白の向こう。 / BUILT ON THE WEB</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
