@@ -1,7 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
 const login = process.env.GITHUB_REPOSITORY_OWNER || 'HX-Wrdzgzs';
-const token = process.env.GITHUB_TOKEN;
+const profileToken = process.env.PROFILE_STATS_TOKEN || '';
+const token = profileToken || process.env.GITHUB_TOKEN;
 
 function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
@@ -22,7 +23,7 @@ async function loadCounts() {
   }
 
   if (!token) {
-    throw new Error('GITHUB_TOKEN is required');
+    throw new Error('PROFILE_STATS_TOKEN or GITHUB_TOKEN is required');
   }
 
   const to = new Date();
@@ -50,11 +51,7 @@ async function loadCounts() {
     },
     body: JSON.stringify({
       query,
-      variables: {
-        login,
-        from: from.toISOString(),
-        to: to.toISOString(),
-      },
+      variables: { login, from: from.toISOString(), to: to.toISOString() },
     }),
   });
 
@@ -78,6 +75,7 @@ async function loadCounts() {
     pullRequests: collection.totalPullRequestContributions,
     reviews: collection.totalPullRequestReviewContributions,
     restricted: collection.restrictedContributionsCount,
+    privateAccess: Boolean(profileToken),
   };
 }
 
@@ -125,10 +123,7 @@ function allocatePercentages(values) {
           a.index - b.index,
       )[0];
 
-    if (!candidate) {
-      break;
-    }
-
+    if (!candidate) break;
     candidate.assigned -= 1;
     remaining += 1;
   }
@@ -143,6 +138,7 @@ function calculateMetrics(counts) {
     pullRequests: Math.max(0, Number(counts.pullRequests) || 0),
     reviews: Math.max(0, Number(counts.reviews) || 0),
     restricted: Math.max(0, Number(counts.restricted) || 0),
+    privateAccess: Boolean(counts.privateAccess),
   };
 
   const total = normalized.commits + normalized.issues + normalized.pullRequests + normalized.reviews;
@@ -153,11 +149,7 @@ function calculateMetrics(counts) {
     reviews: normalized.reviews,
   });
 
-  return {
-    ...normalized,
-    total,
-    percentages,
-  };
+  return { ...normalized, total, percentages };
 }
 
 function renderSvg(metrics, theme) {
@@ -174,6 +166,7 @@ function renderSvg(metrics, theme) {
   const background = dark ? '#0d1117' : '#ffffff';
   const border = dark ? '#30363d' : '#d0d7de';
   const centerFill = dark ? '#161b22' : '#ffffff';
+  const scope = metrics.privateAccess ? 'Public + accessible private contributions' : 'Public contributions';
 
   const pointOffset = (percentage, length) => {
     if (percentage <= 0) return 0;
@@ -192,7 +185,7 @@ function renderSvg(metrics, theme) {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
-  <title id="title">${escapeXml(login)} public activity overview</title>
+  <title id="title">${escapeXml(login)} activity overview</title>
   <desc id="desc">Last 12 months: ${metrics.commits} commits, ${metrics.issues} issues, ${metrics.pullRequests} pull requests and ${metrics.reviews} code reviews.</desc>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="12" fill="${background}" stroke="${border}"/>
 
@@ -206,7 +199,7 @@ function renderSvg(metrics, theme) {
   </style>
 
   <text x="28" y="35" class="title">Activity overview</text>
-  <text x="28" y="56" class="subtitle">Public contributions · Last 12 months · Updated ${updated}</text>
+  <text x="28" y="56" class="subtitle">${escapeXml(scope)} · Last 12 months · Updated ${updated}</text>
 
   <line x1="${centerX - axisX}" y1="${centerY}" x2="${centerX + axisX}" y2="${centerY}" stroke="${accent}" stroke-width="3" stroke-linecap="round"/>
   <line x1="${centerX}" y1="${centerY - axisY}" x2="${centerX}" y2="${centerY + axisY}" stroke="${accent}" stroke-width="3" stroke-linecap="round"/>
