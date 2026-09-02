@@ -23,6 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    env:
+      PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+      PROFILE_ORGANIZATIONS: Amia-Mizuki-Dev-Team
+      PROFILE_EXCLUDE_REPOS: Gensokyo-NewQQ
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -40,21 +45,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate top languages (light)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&langs_count=8&exclude_repo=Gensokyo-NewQQ&theme=default
-          path: dist/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate top languages (dark)
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&langs_count=8&exclude_repo=Gensokyo-NewQQ&theme=github_dark
-          path: dist/top-langs-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate repository languages
+        run: node scripts/generate-top-languages.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate contribution snake
         uses: platane/snk/svg-only@v3
