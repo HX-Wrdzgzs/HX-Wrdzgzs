@@ -14,7 +14,7 @@
 
 主要在做 Amia / Mizuki Bot 生态、音游数据与客户端、Web 服务、基础设施自动化，以及一些业余无线电相关工具。
 
-> 公开主页只列当前可访问的公开项目。部分正在使用的服务端、备份与内部架构仓库为私有仓库，因此不会出现在公开仓库数量、Top Languages 或项目链接中。
+> 公开主页只列当前可访问的公开项目。统计任务支持通过 `PROFILE_STATS_TOKEN` 把令牌可访问的私有仓库纳入汇总；未配置时自动回退到公开数据。无论哪种模式，都不会在生成的统计卡中公开私有仓库名称或代码内容。
 
 ## 常用技术 / Tech Stack
 
@@ -88,7 +88,7 @@
   </picture>
 </p>
 
-<p align="center"><sub>公开贡献统计。README 更新时会重新生成，并在每日定时任务中刷新。</sub></p>
+<p align="center"><sub>贡献统计自动刷新；配置私有统计 Token 后纳入其可访问的私有贡献，未配置时自动使用公开数据。</sub></p>
 
 ## GitHub 数据 / GitHub Stats
 
@@ -96,14 +96,16 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" />
-    <img height="165" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" alt="GitHub Stats" />
+    <img height="180" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" alt="GitHub Stats" />
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" />
-    <img height="165" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" alt="Top Languages" />
+    <img height="180" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" alt="Repository Languages" />
   </picture>
 </p>
+
+<p align="center"><sub>仓库数与语言卡按个人账号 + Amia 跟踪仓库汇总。语言比例表示仓库整体代码构成，不等同于个人作者行数占比。</sub></p>
 
 ## 贡献轨迹 / Contribution Snake
 
