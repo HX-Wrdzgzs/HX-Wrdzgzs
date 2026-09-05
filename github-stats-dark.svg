@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="229" viewBox="0 0 495 229" role="img" aria-labelledby="title desc">
+  <title id="title">HX-Wrdzgzs GitHub stats</title>
+  <desc id="desc">GitHub contribution statistics and tracked repository totals. Private repository names are never rendered.</desc>
+  <rect x="0.5" y="0.5" width="494" height="228" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .heading { font-size: 17px; font-weight: 600; fill: #58a6ff; }
+    .subtitle { font-size: 11px; fill: #8b949e; }
+    .label { font-size: 13px; fill: #8b949e; }
+    .value { font-size: 14px; font-weight: 600; fill: #e6edf3; }
+  </style>
+  <text x="25" y="32" class="heading">HX-Wrdzgzs GitHub Stats</text>
+  <text x="25" y="53" class="subtitle">Public + accessible private · Last 12 months · Updated 2026-09-05</text>
+  
+        <circle cx="32" cy="85" r="4" fill="#3fb950"/>
+        <text x="45" y="90" class="label">Total Stars:</text>
+        <text x="224" y="90" text-anchor="end" class="value">13</text>
+        <circle cx="270" cy="85" r="4" fill="#3fb950"/>
+        <text x="283" y="90" class="label">Commits:</text>
+        <text x="463" y="90" text-anchor="end" class="value">1,333</text>
+        <circle cx="32" cy="119" r="4" fill="#3fb950"/>
+        <text x="45" y="124" class="label">Pull Requests:</text>
+        <text x="224" y="124" text-anchor="end" class="value">35</text>
+        <circle cx="270" cy="119" r="4" fill="#3fb950"/>
+        <text x="283" y="124" class="label">Issues:</text>
+        <text x="463" y="124" text-anchor="end" class="value">4</text>
+        <circle cx="32" cy="153" r="4" fill="#3fb950"/>
+        <text x="45" y="158" class="label">Code Reviews:</text>
+        <text x="224" y="158" text-anchor="end" class="value">0</text>
+        <circle cx="270" cy="153" r="4" fill="#3fb950"/>
+        <text x="283" y="158" class="label">Tracked Repos:</text>
+        <text x="463" y="158" text-anchor="end" class="value">48</text>
+        <circle cx="32" cy="187" r="4" fill="#3fb950"/>
+        <text x="45" y="192" class="label">Public Repos:</text>
+        <text x="224" y="192" text-anchor="end" class="value">27</text>
+        <circle cx="270" cy="187" r="4" fill="#3fb950"/>
+        <text x="283" y="192" class="label">Private Repos:</text>
+        <text x="463" y="192" text-anchor="end" class="value">21</text>
+</svg>
