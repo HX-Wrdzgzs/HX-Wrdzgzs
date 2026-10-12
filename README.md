@@ -87,7 +87,7 @@
   </picture>
 </p>
 
-<p align="center"><sub>贡献统计自动刷新；配置私有统计 Token 后纳入其可访问的私有贡献，未配置时自动使用公开数据。</sub></p>
+<p align="center"><sub>贡献统计自动刷新。</sub></p>
 
 ## GitHub 数据 / GitHub Stats
 
