@@ -14,8 +14,6 @@
 
 主要在做 Amia_晓山瑞希 Bot 生态、音游数据与客户端、Web 服务、基础设施自动化，以及一些业余无线电与嵌入式相关工具。
 
-> 公开主页只列当前可访问的公开项目。统计任务支持通过 `PROFILE_STATS_TOKEN` 把令牌可访问的私有仓库纳入汇总；未配置时自动回退到公开数据。无论哪种模式，都不会在生成的统计卡中公开私有仓库名称或代码内容。
-
 ## 常用技术 / Tech Stack
 
 <p align="center">
@@ -78,7 +76,6 @@
 - Hong Xing 项目站、HongXingOS 7 相关页面、基础设施迁移与 Cloudflare Pages 部署
 - Home Assistant、ESP32-S3、GitHub Actions 与保留人工确认的自动化工具
 - BA4THG QSO / QSL、HX-HAM 点名助手及业余无线电 Web 工具
-- STM32WB55 低功耗手表原型设计与验证（Memory LCD、GNSS、IMU、FRAM）
 
 ## 活跃概览 / Activity Overview
 
