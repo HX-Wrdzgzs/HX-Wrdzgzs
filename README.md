@@ -6,7 +6,6 @@
   <a href="https://github.com/Amia-Mizuki-Dev-Team">Amia / Mizuki Dev Team</a> ·
   <a href="https://github.com/HX-Wrdzgzs/homepages">个人主页</a> ·
   <a href="https://help.mizuki.top">Amia Docs</a> ·
-  <a href="https://github.com/HX-Wrdzgzs/HongXingWeb">Hong Xing</a> ·
   <a href="https://qsl.mizuki.top">BA4THG QSL</a>
 </p>
 
@@ -57,7 +56,6 @@
 ### Web、系统与基础设施
 
 - **[homepages](https://github.com/HX-Wrdzgzs/homepages)**：个人主页，采用蓝黑视觉体系，包含独立项目页、搜索、筛选、分页、快速预览与多页面导航。
-- **[HongXingWeb](https://github.com/HX-Wrdzgzs/HongXingWeb)**：Hong Xing 技术 / 项目 / 服务官网，包含项目、基础设施迁移、公告、生命周期、支持下载及 Amia 生态页面。
 - **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 配套文档站，持续跟进 OneBot、WebUI 与相关兼容变化。
 - **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控系统。
 
@@ -73,7 +71,6 @@
 - Amia_晓山瑞希插件生态的 Provider 契约、身份绑定、权限、消息链路、错误码与审计
 - 舞萌 DX 双数据源、DivingFish OAuth、Android 客户端与 MizukiSync 数据链路
 - PJSK 本地资源同步、Catalog / Media Service、竞猜引擎与 Gensokyo-NewQQ 版本兼容性适配
-- Hong Xing 项目站、HongXingOS 7 相关页面、基础设施迁移与 Cloudflare Pages 部署
 - Home Assistant、ESP32-S3、GitHub Actions 与保留人工确认的自动化工具
 - BA4THG QSO / QSL、HX-HAM 点名助手及业余无线电 Web 工具
 
