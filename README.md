@@ -51,7 +51,6 @@
 - **[Amia-plugin-welcome](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-welcome)**：QQ 群成员加入与退出通知插件，支持图文欢迎、随机文案及群级开关。
 - **[Amia-plugin-qbind](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-qbind)**：QQ 官方机器人身份绑定与解析组件，为需要身份关联的插件提供统一映射能力。
 - **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：舞萌 DX Android 第三方客户端的公开版本；当前部分新架构与服务端组件在私有仓库维护。
-- **[hx-pjsk-gateway](https://github.com/HX-Wrdzgzs/hx-pjsk-gateway)**：连接 PJSK Web 查询、机器人验证与数据节点的网关。
 
 ### Web、系统与基础设施
 
