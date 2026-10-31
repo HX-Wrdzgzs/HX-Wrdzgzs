@@ -21,7 +21,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
 
     env:
       PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
@@ -47,6 +47,11 @@ jobs:
 
       - name: Generate repository languages
         run: node scripts/generate-top-languages.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate author-attributed code audit
+        run: node scripts/generate-code-audit.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
