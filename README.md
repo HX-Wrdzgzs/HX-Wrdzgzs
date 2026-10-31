@@ -18,8 +18,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C" />
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
 </p>
 
@@ -50,12 +53,14 @@
 - **[Amia-plugin-pjskhelp](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-pjskhelp)**：PJSK 查询与本地竞猜方向插件，持续补全资源、Media Service 与竞猜链路。
 - **[Amia-plugin-welcome](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-welcome)**：QQ 群成员加入与退出通知插件，支持图文欢迎、随机文案及群级开关。
 - **[Amia-plugin-qbind](https://github.com/Amia-Mizuki-Dev-Team/Amia-plugin-qbind)**：QQ 官方机器人身份绑定与解析组件，为需要身份关联的插件提供统一映射能力。
+- **[Gensokyo-NewQQ](https://github.com/HX-Wrdzgzs/Gensokyo-NewQQ)**：基于上游项目的 Fork 维护分支；本人提交主要涉及图片上传/跳转安全校验、部署审计与兼容性测试，上游主体代码不计入个人贡献。
 - **[Amia-Sync-Android](https://github.com/HX-Wrdzgzs/Amia-Sync-Android)**：舞萌 DX Android 第三方客户端的公开版本；当前部分新架构与服务端组件在私有仓库维护。
 
-### Web、系统与基础设施
+### Web、桌面工具与基础设施
 
 - **[homepages](https://github.com/HX-Wrdzgzs/homepages)**：个人主页，采用蓝黑视觉体系，包含独立项目页、搜索、筛选、分页、快速预览与多页面导航。
 - **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 配套文档站，持续跟进 OneBot、WebUI 与相关兼容变化。
+- **[InvoiceMailAssistant](https://github.com/HX-Wrdzgzs/InvoiceMailAssistant)**：Windows WPF 桌面工具，自动分类开票邮件、解析业务字段，并通过 SQLite 与受保护的 Excel 局部写入实现去重、恢复和重试。
 - **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控系统。
 
 ### Amateur Radio / BA4THG
@@ -63,7 +68,7 @@
 - **[ham-checkin-assistant](https://github.com/HX-Wrdzgzs/ham-checkin-assistant)**：HX-HAM Windows 中继点名助手，支持呼号与设备信息解析、SQLite 场次管理、Excel 联动和历史记录辅助录入。
 - **[BA4THG-QSL](https://github.com/HX-Wrdzgzs/BA4THG-QSL)**：BA4THG 的 QSL 展示与查询页面。
 - **[BA4THG-QSO](https://github.com/HX-Wrdzgzs/BA4THG-QSO)**：QSO 记录与相关 Web/API 工具。
-- **[uv-k5-repeater-web](https://github.com/HX-Wrdzgzs/uv-k5-repeater-web)**：面向 UV-K5 / 中继场景的 Web 工具实验。
+- **[uv-k5-losehu132-wrdzgzs](https://github.com/HX-Wrdzgzs/uv-k5-losehu132-wrdzgzs)**：面向泉盛 UV-K5 / UV-K6 的 LOSEHU132 自定义固件维护，包含构建发布校验、EEPROM 数据处理与中继数据库工具。
 
 ## 当前关注 / Current Focus
 
@@ -100,7 +105,17 @@
   </picture>
 </p>
 
-<p align="center"><sub>仓库数与语言卡按个人账号 + Amia 跟踪仓库汇总。语言比例表示仓库整体代码构成，不等同于个人作者行数占比。</sub></p>
+<p align="center"><sub>仓库总数按个人账号 + Amia 跟踪仓库统计；语言卡排除 Fork 与 Amia-Backup 源码快照，并按 GitHub 语言字节数计算，表示仓库构成而非个人作者行数。</sub></p>
+
+## 代码贡献审计 / Code Audit
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.json">
+    <img width="760" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.svg" alt="Author-attributed code audit" />
+  </a>
+</p>
+
+<p align="center"><sub>按 GitHub 归属到 HX-Wrdzgzs 的提交，统计源码文件累计新增与删除行数；这不是当前仓库现存 LOC。已排除备份快照、UV-K5 上游导入基线、上游同步提交、合并提交、生成目录与依赖目录。Fork 只计本账号提交的改动。<a href="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.json">审计明细 JSON</a></sub></p>
 
 ## 贡献轨迹 / Contribution Snake
 
