@@ -147,12 +147,22 @@ function shouldSkipCommit(repository, commit) {
 async function loadAuthoredCommits(repositories) {
   const tasks = [];
   let excludedCommitCount = 0;
+  let emptyRepositoryCount = 0;
 
   for (const repository of repositories) {
-    const commits = await listPaged((page) =>
-      'https://api.github.com/repos/' + repository.full_name +
-      '/commits?author=' + encodeURIComponent(login) + '&per_page=100&page=' + page,
-    );
+    let commits;
+    try {
+      commits = await listPaged((page) =>
+        'https://api.github.com/repos/' + repository.full_name +
+        '/commits?author=' + encodeURIComponent(login) + '&per_page=100&page=' + page,
+      );
+    } catch (error) {
+      if (String(error).includes('409 Conflict')) {
+        emptyRepositoryCount += 1;
+        continue;
+      }
+      throw error;
+    }
 
     for (const commit of commits) {
       const authorLogin = commit.author?.login;
@@ -166,7 +176,7 @@ async function loadAuthoredCommits(repositories) {
     }
   }
 
-  return { tasks, excludedCommitCount };
+  return { tasks, excludedCommitCount, emptyRepositoryCount };
 }
 
 async function mapBatches(items, batchSize, mapper) {
@@ -234,7 +244,7 @@ function renderSvg(report) {
 }
 
 const repositories = await loadRepositories();
-const { tasks, excludedCommitCount } = await loadAuthoredCommits(repositories);
+const { tasks, excludedCommitCount, emptyRepositoryCount } = await loadAuthoredCommits(repositories);
 const seenCommits = new Set();
 const uniqueTasks = tasks.filter((task) => {
   if (seenCommits.has(task.sha)) return false;
@@ -305,6 +315,7 @@ const report = {
   net: additions - deletions,
   excludedRepositoryCount: excludedRepos.size,
   excludedCommitCount,
+  emptyRepositoryCount,
   skippedMergeCommitCount: mergeCommitCount,
   failedCommitFetchCount: failedCommitCount,
   languages,
@@ -335,6 +346,7 @@ console.log(JSON.stringify({
   languages: report.languages,
   excludedRepositoryCount: report.excludedRepositoryCount,
   excludedCommitCount: report.excludedCommitCount,
+  emptyRepositoryCount: report.emptyRepositoryCount,
   skippedMergeCommitCount: report.skippedMergeCommitCount,
   failedCommitFetchCount: report.failedCommitFetchCount,
 }, null, 2));
