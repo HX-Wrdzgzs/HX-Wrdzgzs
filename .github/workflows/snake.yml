@@ -26,7 +26,8 @@ jobs:
     env:
       PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
       PROFILE_ORGANIZATIONS: Amia-Mizuki-Dev-Team
-      PROFILE_EXCLUDE_REPOS: Gensokyo-NewQQ
+      PROFILE_EXCLUDE_REPOS: Gensokyo-NewQQ,Amia-Backup
+      PROFILE_AUDIT_EXCLUDE_REPOS: Amia-Backup
 
     steps:
       - name: Check out repository
