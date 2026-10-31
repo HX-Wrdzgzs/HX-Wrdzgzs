@@ -197,6 +197,10 @@ async function inspectCommit(task) {
 
   const files = [];
   for (const file of detail.files || []) {
+    if (
+      task.repository.full_name === 'HX-Wrdzgzs/HX-Wrdzgzs' &&
+      file.filename === 'scripts/generate-code-audit.mjs'
+    ) continue;
     const language = languageForFile(file.filename || '');
     if (!language) continue;
     files.push({
@@ -324,6 +328,7 @@ const report = {
     'This is cumulative commit activity, not the number of lines currently present in repositories.',
     'Backup snapshots, generated/dependency directories, upstream-sync commits, merge commits, and the imported UV-K5 baseline are excluded.',
     'Forked repositories are included only for commits authored by this account; upstream code is not attributed to this account.',
+    'The audit generator itself is excluded from the totals.',
   ],
 };
 
