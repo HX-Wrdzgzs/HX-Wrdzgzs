@@ -145,15 +145,20 @@ async function loadLanguageTotals(repositories) {
   }
 
   const totalBytes = [...totals.values()].reduce((sum, value) => sum + value, 0);
-  return [...totals.entries()]
+  const ranked = [...totals.entries()]
     .map(([language, bytes]) => ({
       language,
       bytes,
       repositories: repoCounts.get(language) || 0,
       percentage: totalBytes > 0 ? (bytes / totalBytes) * 100 : 0,
     }))
-    .sort((a, b) => b.bytes - a.bytes || b.repositories - a.repositories || a.language.localeCompare(b.language))
-    .slice(0, 8);
+    .sort((a, b) => b.bytes - a.bytes || b.repositories - a.repositories || a.language.localeCompare(b.language));
+
+  // Keep the ranked chart truthful; include Rust only when GitHub reports actual Rust bytes.
+  const featured = ranked.slice(0, 11);
+  const rust = ranked.find((item) => item.language === 'Rust');
+  if (rust && !featured.some((item) => item.language === 'Rust')) featured.push(rust);
+  return featured.sort((a, b) => b.bytes - a.bytes);
 }
 
 function fallbackColor(index, dark) {
@@ -166,7 +171,7 @@ function fallbackColor(index, dark) {
 function renderSvg(languages, repositoryCount, privateCount, theme) {
   const dark = theme === 'dark';
   const width = 495;
-  const height = 229;
+  const height = Math.max(229, 100 + Math.ceil(languages.length / 2) * 34);
   const background = dark ? '#0d1117' : '#ffffff';
   const border = dark ? '#30363d' : '#d0d7de';
   const title = dark ? '#58a6ff' : '#0969da';
@@ -205,9 +210,9 @@ function renderSvg(languages, repositoryCount, privateCount, theme) {
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
     .heading { font-size: 17px; font-weight: 600; fill: ${title}; }
-    .subtitle { font-size: 11px; fill: ${muted}; }
-    .label { font-size: 12px; fill: ${muted}; }
-    .value { font-size: 12px; font-weight: 600; fill: ${text}; }
+    .subtitle { font-size: 13px; fill: ${muted}; }
+    .label { font-size: 14px; fill: ${muted}; }
+    .value { font-size: 14px; font-weight: 600; fill: ${text}; }
   </style>
   <text x="25" y="32" class="heading">Repository Languages</text>
   <text x="25" y="53" class="subtitle">${escapeXml(scope)} · Updated ${updated}</text>
