@@ -20,6 +20,7 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="C#" />
   <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C" />
@@ -88,34 +89,47 @@
   </picture>
 </p>
 
-<p align="center"><sub>贡献统计自动刷新。</sub></p>
-
 ## GitHub 数据 / GitHub Stats
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" />
-    <img height="180" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" alt="GitHub Stats" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" />
-    <img height="180" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" alt="Repository Languages" />
+    <img width="495" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/github-stats.svg" alt="GitHub Stats" />
   </picture>
 </p>
 
-<p align="center"><sub>仓库总数按个人账号 + Amia 跟踪仓库统计；语言卡排除 Fork 与 Amia-Backup 源码快照，并按 GitHub 语言字节数计算，表示仓库构成而非个人作者行数。</sub></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" />
+    <img width="495" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/top-langs.svg" alt="Repository Languages" />
+  </picture>
+</p>
+
+<details>
+<summary>语言与仓库统计说明</summary>
+
+仓库总数涵盖个人账号和 Amia 跟踪仓库。语言分布按 GitHub 识别的代码字节数计算，排除 Fork 与备份源码快照，并不代表个人贡献行数。Rust 只有在仓库实际检测到 Rust 代码时才会进入自动统计。
+
+</details>
 
 ## 代码贡献审计 / Code Audit
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.json">
-    <img width="760" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.svg" alt="Author-attributed code audit" />
+    <img width="600" src="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.svg" alt="Author-attributed code audit" />
   </a>
 </p>
 
-<p align="center"><sub>按 GitHub 归属到 HX-Wrdzgzs 的提交，统计源码文件累计新增与删除行数；这不是当前仓库现存 LOC。已排除备份快照、UV-K5 上游导入基线、上游同步提交、合并提交、生成目录与依赖目录。Fork 只计本账号提交的改动。<a href="https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.json">审计明细 JSON</a></sub></p>
+<details>
+<summary>代码贡献审计说明与原始数据</summary>
+
+审计按归属到 HX-Wrdzgzs 的提交统计源码文件累计新增和删除行数，并非仓库当前现存代码行数。已排除备份快照、上游导入基线、上游同步与合并提交、生成目录和依赖目录。Fork 仅统计本人提交的改动。
+
+[查看审计明细 JSON](https://raw.githubusercontent.com/HX-Wrdzgzs/HX-Wrdzgzs/output/code-audit.json)
+
+</details>
 
 ## 贡献轨迹 / Contribution Snake
 
