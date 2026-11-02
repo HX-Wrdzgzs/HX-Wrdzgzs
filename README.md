@@ -63,6 +63,7 @@
 - **[GensokyoNewQQWeb](https://github.com/HX-Wrdzgzs/GensokyoNewQQWeb)**：Gensokyo-NewQQ 配套文档站，持续跟进 OneBot、WebUI 与相关兼容变化。
 - **[InvoiceMailAssistant](https://github.com/HX-Wrdzgzs/InvoiceMailAssistant)**：Windows WPF 桌面工具，自动分类开票邮件、解析业务字段，并通过 SQLite 与受保护的 Excel 局部写入实现去重、恢复和重试。
 - **[retro-monitor](https://github.com/HX-Wrdzgzs/retro-monitor)**：基于 Windows、Home Assistant 与 ESP32-S3 的本地硬件监控系统。
+- **[MizukiSync-Edge](https://github.com/HX-Wrdzgzs/MizukiSync-Edge)**：MizukiSync 的 Rust 目标公共只读备用层；目前仓库只有架构与治理文档，尚无 Rust 源码，因此不会进入自动语言统计或源码贡献行数。
 
 ### Amateur Radio / BA4THG
 
@@ -75,6 +76,7 @@
 
 - Amia_晓山瑞希插件生态的 Provider 契约、身份绑定、权限、消息链路、错误码与审计
 - 舞萌 DX 双数据源、DivingFish OAuth、Android 客户端与 MizukiSync 数据链路
+- MizukiSync-Edge 公共只读备用层：Rust 目标架构、数据许可与故障隔离门禁
 - PJSK 本地资源同步、Catalog / Media Service、竞猜引擎与 Gensokyo-NewQQ 版本兼容性适配
 - Home Assistant、ESP32-S3、GitHub Actions 与保留人工确认的自动化工具
 - BA4THG QSO / QSL、HX-HAM 点名助手及业余无线电 Web 工具
