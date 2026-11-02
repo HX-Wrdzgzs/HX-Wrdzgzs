@@ -218,7 +218,7 @@ function renderStatsSvg(stats, theme) {
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
     .heading { font-size: 17px; font-weight: 600; fill: ${title}; }
-    .subtitle { font-size: 11px; fill: ${muted}; }
+    .subtitle { font-size: 13px; fill: ${muted}; }
     .label { font-size: 13px; fill: ${muted}; }
     .value { font-size: 14px; font-weight: 600; fill: ${text}; }
   </style>
