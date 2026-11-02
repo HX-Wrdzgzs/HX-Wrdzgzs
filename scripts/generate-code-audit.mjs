@@ -215,18 +215,18 @@ async function inspectCommit(task) {
 }
 
 function renderSvg(report) {
-  const width = 760;
-  const height = 330;
+  const width = 600;
+  const height = 385;
   const top = report.languages.slice(0, 8);
   const max = Math.max(1, ...top.map((item) => item.additions));
   const rows = top.map((item, index) => {
-    const y = 112 + index * 25;
-    const bar = Math.max(2, Math.round((item.additions / max) * 300));
+    const y = 145 + index * 26;
+    const bar = Math.max(2, Math.round((item.additions / max) * 235));
     return [
       '<text x="32" y="' + y + '" class="label">' + escapeXml(item.language) + '</text>',
-      '<rect x="150" y="' + (y - 11) + '" width="300" height="9" rx="4" fill="#21262d"/>',
-      '<rect x="150" y="' + (y - 11) + '" width="' + bar + '" height="9" rx="4" fill="#58a6ff"/>',
-      '<text x="470" y="' + y + '" class="value">' + item.additions.toLocaleString('en-US') + '</text>',
+      '<rect x="130" y="' + (y - 11) + '" width="235" height="9" rx="4" fill="#21262d"/>',
+      '<rect x="130" y="' + (y - 11) + '" width="' + bar + '" height="9" rx="4" fill="#58a6ff"/>',
+      '<text x="395" y="' + y + '" class="value">' + item.additions.toLocaleString('en-US') + '</text>',
     ].join('');
   }).join('');
 
@@ -236,13 +236,13 @@ function renderSvg(report) {
     '<title id="title">Author-attributed code changes</title>',
     '<desc id="desc">Cumulative source-code line additions in commits authored by ' + escapeXml(login) + '.</desc>',
     '<rect x="0.5" y="0.5" width="' + (width - 1) + '" height="' + (height - 1) + '" rx="12" fill="#0d1117" stroke="#30363d"/>',
-    '<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}.title{font-size:17px;font-weight:600;fill:#e6edf3}.sub{font-size:11px;fill:#8b949e}.label{font-size:12px;fill:#c9d1d9}.value{font-size:12px;font-weight:600;fill:#e6edf3}</style>',
+    '<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}.title{font-size:20px;font-weight:600;fill:#e6edf3}.sub{font-size:14px;fill:#8b949e}.label{font-size:16px;fill:#c9d1d9}.value{font-size:16px;font-weight:600;fill:#e6edf3}</style>',
     '<text x="32" y="35" class="title">Code authored through Git commits</text>',
     '<text x="32" y="56" class="sub">' + escapeXml(report.scope) + ' · Updated ' + escapeXml(report.generatedAt.slice(0, 10)) + '</text>',
     '<text x="32" y="84" class="value">' + report.additions.toLocaleString('en-US') + ' lines added</text>',
-    '<text x="260" y="84" class="sub">' + report.deletions.toLocaleString('en-US') + ' removed · ' + report.net.toLocaleString('en-US') + ' net</text>',
+    '<text x="32" y="109" class="sub">' + report.deletions.toLocaleString('en-US') + ' removed · ' + report.net.toLocaleString('en-US') + ' net</text>',
     rows || '<text x="32" y="120" class="label">No authored source-code changes found.</text>',
-    '<text x="32" y="310" class="sub">' + report.commitCount + ' commits · ' + report.repositoryCount + ' repositories · ' + report.fileCount + ' distinct files</text>',
+    '<text x="32" y="371" class="sub">' + report.commitCount + ' commits · ' + report.repositoryCount + ' repositories · ' + report.fileCount + ' distinct files</text>',
     '</svg>',
   ].join('\n');
 }
