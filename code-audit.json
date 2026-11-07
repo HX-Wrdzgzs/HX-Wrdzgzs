@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-11-07T06:16:14.374Z",
+  "account": "HX-Wrdzgzs",
+  "scope": "Personal + accessible organization repositories",
+  "trackedRepositoryCount": 52,
+  "repositoryCount": 37,
+  "commitCount": 754,
+  "fileCount": 969,
+  "additions": 325652,
+  "deletions": 57113,
+  "net": 268539,
+  "excludedRepositoryCount": 1,
+  "excludedCommitCount": 2,
+  "emptyRepositoryCount": 1,
+  "skippedMergeCommitCount": 31,
+  "failedCommitFetchCount": 0,
+  "languages": [
+    {
+      "language": "Python",
+      "additions": 173133,
+      "deletions": 27123,
+      "net": 146010
+    },
+    {
+      "language": "JavaScript",
+      "additions": 74544,
+      "deletions": 6632,
+      "net": 67912
+    },
+    {
+      "language": "Kotlin",
+      "additions": 47034,
+      "deletions": 11199,
+      "net": 35835
+    },
+    {
+      "language": "C#",
+      "additions": 14427,
+      "deletions": 3840,
+      "net": 10587
+    },
+    {
+      "language": "Vue",
+      "additions": 7273,
+      "deletions": 3788,
+      "net": 3485
+    },
+    {
+      "language": "Go",
+      "additions": 5401,
+      "deletions": 2094,
+      "net": 3307
+    },
+    {
+      "language": "TypeScript",
+      "additions": 2131,
+      "deletions": 1694,
+      "net": 437
+    },
+    {
+      "language": "PowerShell",
+      "additions": 522,
+      "deletions": 5,
+      "net": 517
+    },
+    {
+      "language": "C",
+      "additions": 426,
+      "deletions": 270,
+      "net": 156
+    },
+    {
+      "language": "Shell",
+      "additions": 392,
+      "deletions": 324,
+      "net": 68
+    },
+    {
+      "language": "SQL",
+      "additions": 369,
+      "deletions": 144,
+      "net": 225
+    }
+  ],
+  "notes": [
+    "Counts additions and deletions in source-code files from commits attributed by GitHub to this account.",
+    "This is cumulative commit activity, not the number of lines currently present in repositories.",
+    "Backup snapshots, generated/dependency directories, upstream-sync commits, merge commits, and the imported UV-K5 baseline are excluded.",
+    "Forked repositories are included only for commits authored by this account; upstream code is not attributed to this account.",
+    "The audit generator itself is excluded from the totals."
+  ]
+}
